@@ -21,8 +21,30 @@ To run the Valve Timing Calculator, you need:
 ### Installation
 
 1. Clone the repository to your local machine:
-```bash git clone https://github.com/<your-username>/valve-timing-calculator.git```
+```
+git clone https://github.com/<your-username>/valve-timing-calculator.git
+```
 
-2. Navigate to the directory where the repository is cloned:
-```bash cd valve-timing-calculator```
+3. Navigate to the directory where the repository is cloned:
+```
+cd valve-timing-calculator
+```
+
+## Running the Application
+To run the Valve Timing Calculator, execute the following command in the terminal:
+```
+java -jar ValveTimingCalculator.jar
+```
+
+If you have the source code, you can compile and run it using:
+```
+javac ValveTimingCalculator.java
+java ValveTimingCalculator
+```
+
+### How to Use
+1. Enter the values for intake duration, exhaust duration, lobe separation, and advance in the respective fields.
+2. Click the "Update" button to calculate and display the valve timings.
+3. Adjust the values as needed to see different results.
+
 
