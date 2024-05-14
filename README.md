@@ -22,9 +22,9 @@ To run the Valve Timing Calculator, you need:
 
 1. Clone the repository to your local machine:
   ```bash
-  git clone https://github.com/<your-username>/valve-timing-calculator.git
+  git clone https://github.com/<your-username>/valve-timing-calculator.git```
 
 2. Navigate to the directory where the repository is cloned:
   ```bash
-  cd valve-timing-calculator
+  cd valve-timing-calculator```
 
