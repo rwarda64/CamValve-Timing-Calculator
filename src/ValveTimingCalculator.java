@@ -75,13 +75,13 @@ public class ValveTimingCalculator extends JFrame {
 
     private void updateValues() {
         try {
-            int advance = Integer.parseInt(advanceField.getText());
+            double advance = Double.parseDouble(advanceField.getText());
 
             // Calculate the intake and exhaust timings
-            int intakeOpen = Integer.parseInt(intakeOpenField.getText()) - advance;
-            int intakeClose = Integer.parseInt(intakeCloseField.getText()) + advance;
-            int exhaustOpen = Integer.parseInt(exhaustOpenField.getText()) - advance;
-            int exhaustClose = Integer.parseInt(exhaustCloseField.getText()) + advance;
+            double intakeOpen = Double.parseDouble(intakeOpenField.getText()) - advance;
+            double intakeClose = Double.parseDouble(intakeCloseField.getText()) + advance;
+            double exhaustOpen = Double.parseDouble(exhaustOpenField.getText()) - advance;
+            double exhaustClose = Double.parseDouble(exhaustCloseField.getText()) + advance;
 
             // Set the corrected values back to the text fields
             intakeOpenField.setText(String.valueOf(intakeOpen));
@@ -90,7 +90,7 @@ public class ValveTimingCalculator extends JFrame {
             exhaustCloseField.setText(String.valueOf(exhaustClose));
 
             // Calculate and set overlap
-            int overlap = calculateOverlap(intakeOpen, exhaustClose);
+            double overlap = calculateOverlap(intakeOpen, exhaustClose);
             overlapField.setText(String.valueOf(overlap));
 
         } catch (NumberFormatException e) {
@@ -98,7 +98,7 @@ public class ValveTimingCalculator extends JFrame {
         }
     }
 
-    private int calculateOverlap(int intakeOpen, int exhaustClose) {
+    private double calculateOverlap(double intakeOpen, double exhaustClose) {
         // Assuming overlap calculation is based on these events
         return Math.abs(intakeOpen) + Math.abs(exhaustClose);
     }
